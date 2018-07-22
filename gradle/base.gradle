@@ -1,0 +1,29 @@
+apply plugin: 'java'
+apply plugin: 'java-library'
+apply plugin: 'eclipse'
+apply plugin: 'maven-publish'
+
+repositories {
+    mavenLocal()
+    jcenter()
+    maven { url 'https://artifactory.aspex.com/artifactory/libs-release'}
+}
+
+def gitVersion = {
+    return "git describe --dirty".execute().in.text.toString().trim()
+}
+
+version=gitVersion()
+//version='0.2.0'
+
+eclipse {
+    classpath {
+        defaultOutputDir = file('.ecbuild')
+    }
+}
+
+task(printVersion) {
+    doLast {
+        println "version=$version"
+    }
+}

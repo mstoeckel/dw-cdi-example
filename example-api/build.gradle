@@ -1,0 +1,3 @@
+dependencies {
+    compile "com.cognodyne.dw:jpa-bundle:$dwCdiVersion"
+}

@@ -1,0 +1,19 @@
+apply plugin: 'com.palantir.sls-java-service-distribution'
+
+dependencies {
+    compile project(':example-api')
+    compile "com.cognodyne.dw:cdi-bundle:$dwCdiVersion"
+    compile "com.cognodyne.dw:jta-bundle:$dwCdiVersion"
+    compile "com.palantir.config.crypto:encrypted-config-value-bundle-dropwizard1:$encryptedConfigVersion"
+    compile "org.postgresql:postgresql:$postgresVersion"
+    //compile "com.fasterxml.jackson.datatype:jackson-datatype-hibernate5:$jacksonDatabindHibernateVersion"
+    
+    compile "com.aspex.jackson.datatype:jackson-datatype-hibernate5:$jacksonDatabindHibernateVersion"
+}
+
+distribution {
+    serviceName 'dw-cdi-example'
+    serviceGroup 'com.cognodyne.dw.example'
+    mainClass 'com.cognodyne.dw.example.ExampleApplication'
+    args 'server', 'var/conf/server.yml'
+}

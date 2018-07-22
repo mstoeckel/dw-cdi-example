@@ -1,0 +1,9 @@
+.classpath
+.project
+.ecbuild/
+.gradle/
+.settings/
+bin/
+build/
+ObjectStore/
+log/

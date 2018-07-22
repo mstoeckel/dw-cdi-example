@@ -1,0 +1,4 @@
+rootProject.name = 'dw-cdi-example'
+
+include 'example-api'
+include 'example-server'
