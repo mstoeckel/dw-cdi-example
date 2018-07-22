@@ -5,9 +5,7 @@ dependencies {
     compile "com.cognodyne.dw:cdi-bundle:$dwCdiVersion"
     compile "com.cognodyne.dw:jta-bundle:$dwCdiVersion"
     compile "com.palantir.config.crypto:encrypted-config-value-bundle-dropwizard1:$encryptedConfigVersion"
-    compile "org.postgresql:postgresql:$postgresVersion"
-    //compile "com.fasterxml.jackson.datatype:jackson-datatype-hibernate5:$jacksonDatabindHibernateVersion"
-    
+    compile "org.postgresql:postgresql:$postgresVersion"    
     compile "com.aspex.jackson.datatype:jackson-datatype-hibernate5:$jacksonDatabindHibernateVersion"
 }
 
